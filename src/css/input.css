@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: #010101;
+    }
+}
+
+@layer utilities {
+    .nav {
+        @apply relative hover:text-green
+    }
+    .nav::after{
+        @apply content-[''] bg-green h-[1px] w-[0%] left-0 -bottom-[5px] absolute duration-300
+    }
+    .nav:hover::after{
+        @apply w-[100%]
+    }
+}
